@@ -2,5 +2,5 @@
 require('dotenv-flow').config();
 
 module.exports = {
-    port: process.env.PORT || '8080'
+  port: process.env.PORT || '8080'
 };

@@ -115,7 +115,7 @@ const CleanWebpackPlugin = require("clean-webpack-plugin");
 const outputDirectory = "dist";
 
 module.exports = {
-  entry: ["babel-polyfill", "./src/client/index.js"],
+  entry: ["babel-polyfill", "./src/client/App.jsx"],
   output: {
     path: path.join(__dirname, outputDirectory),
     filename: "bundle.js"
@@ -222,7 +222,7 @@ This starts a server and listens on port 8080 for connections. The app responds 
 
 ```javascript
 "client": "webpack-dev-server --mode development --devtool inline-source-map --hot",
-"server": "nodemon src/server/index.js",
+"server": "nodemon src/server/app.js",
 "dev": "concurrently \"npm run server\" \"npm run client\""
 ```
 
