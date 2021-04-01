@@ -1,12 +1,16 @@
 const express = require('express');
 const os = require('os');
+const compression = require('compression');
 const config = require('./config');
 const middlewares = require('./middlewares');
 
 const app = express();
 
+// compress all HTTP responses
+app.use(compression());
+
 // allows use of req.body (for json)
-app.use(express.json())
+app.use(express.json());
 
 // static files
 app.use(express.static('dist'));
